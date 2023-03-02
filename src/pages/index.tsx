@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <div className="bg-bg">
         <Navbar />
-        <main className="px-[3.563rem] py-[2.438rem] flex gap-[6rem] items-start h-screen">
+        <main className="px-[3.563rem] py-[2.438rem] flex flex-col md:flex-row gap-[6rem] items-start h-auto md:h-screen">
           {isLoading ? (
             <LoadingState />
           ) : (
