@@ -68,10 +68,10 @@ const Repositories = () => {
           </h1>
 
           <div className="flex flex-col gap-[1.5rem]">
-            {currentItems?.map((repo: RepoProps, index: number) => (
+            {currentItems?.map((repo: RepoProps) => (
               <RepoCard
-                key={index}
-                data={repo}
+                key={repo.name}
+                {...repo}
               />
             ))}
           </div>

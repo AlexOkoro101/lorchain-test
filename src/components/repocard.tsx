@@ -1,21 +1,21 @@
 import { RepoProps } from "@/types";
 import { FC } from "react";
 
-const RepoCard: FC = ({ data }: RepoProps) => {
+const RepoCard: FC = ({ html_url, name, description }: RepoProps) => {
   return (
     <div className="rounded-md bg-white px-8 py-6">
       <a 
-        href={data?.html_url ?? ''} 
+        href={html_url ?? ''} 
         target="_blank" 
         rel="noopener noreferrer"
         className="text-primary leading-[1.813rem] text-2xl"
       >
         <span>
-          {data?.name ?? 'N/A'}
+          {name ?? 'N/A'}
         </span>
       </a>
       <p className="text-base leading-[1.21rem] mt-4">
-        {data?.description ?? 'N/A'}
+        {description ?? 'N/A'}
       </p>
     </div>
   );
